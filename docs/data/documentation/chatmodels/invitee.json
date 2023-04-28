@@ -1,0 +1,448 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatModels\/documentation\/ChatModels"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "c:@M@ChatModels@objc(cs)Invitee",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "class"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Invitee"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatModels"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Invitee"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Class",
+    "symbolKind" : "class",
+    "title" : "Invitee"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@objc"
+            },
+            {
+              "kind" : "text",
+              "text" : "(Invitee) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "class"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Invitee"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/objc(cs)NSObject"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/objc(pl)NSObject",
+        "doc:\/\/ChatModels\/s7CVarArgP",
+        "doc:\/\/ChatModels\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/ChatModels\/s23CustomStringConvertibleP",
+        "doc:\/\/ChatModels\/Se",
+        "doc:\/\/ChatModels\/SE",
+        "doc:\/\/ChatModels\/SQ",
+        "doc:\/\/ChatModels\/SH"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/init(from:)",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/init(id:idType:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/id",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/idType"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/Encodable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatmodels\/invitee"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatModels/SE": {
+  "identifier" : "doc:\/\/ChatModels\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SH": {
+  "identifier" : "doc:\/\/ChatModels\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SQ": {
+  "identifier" : "doc:\/\/ChatModels\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/Se": {
+  "identifier" : "doc:\/\/ChatModels\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/documentation/ChatModels": {
+  "abstract" : [
+    {
+      "text" : "ChatModels consist of all base calsses in whih a client can have an interaction with them.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatModels",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels"
+},
+"doc://ChatModels/documentation/ChatModels/Invitee": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Invitee"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Invitee"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Invitee",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/invitee"
+},
+"doc://ChatModels/documentation/ChatModels/Invitee/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/invitee\/encodable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/Invitee/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/invitee\/id"
+},
+"doc://ChatModels/documentation/ChatModels/Invitee/idType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "idType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/idType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "idType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/invitee\/idtype"
+},
+"doc://ChatModels/documentation/ChatModels/Invitee/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/invitee\/init(from:)"
+},
+"doc://ChatModels/documentation/ChatModels/Invitee/init(id:idType:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "idType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10ChatModels12InviteeTypesO",
+      "text" : "InviteeTypes"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Invitee\/init(id:idType:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:idType:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/invitee\/init(id:idtype:)"
+},
+"doc://ChatModels/objc(cs)NSObject": {
+  "identifier" : "doc:\/\/ChatModels\/objc(cs)NSObject",
+  "title" : "ObjectiveC.NSObject",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/objc(pl)NSObject": {
+  "identifier" : "doc:\/\/ChatModels\/objc(pl)NSObject",
+  "title" : "ObjectiveC.NSObjectProtocol",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/ChatModels\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/ChatModels\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/s7CVarArgP": {
+  "identifier" : "doc:\/\/ChatModels\/s7CVarArgP",
+  "title" : "Swift.CVarArg",
+  "type" : "unresolvable"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

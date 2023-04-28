@@ -1,0 +1,676 @@
+{
+  "abstract" : [
+    {
+      "text" : "Type of thread.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatModels\/documentation\/ChatModels"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:10ChatModels11ThreadTypesO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ThreadTypes"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatModels"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ThreadTypes"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "ThreadTypes"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ThreadTypes"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/8Additive13SafeDecodableP",
+        "doc:\/\/ChatModels\/s12CaseIterableP",
+        "doc:\/\/ChatModels\/Se",
+        "doc:\/\/ChatModels\/SE",
+        "doc:\/\/ChatModels\/SQ",
+        "doc:\/\/ChatModels\/SH",
+        "doc:\/\/ChatModels\/s12IdentifiableP",
+        "doc:\/\/ChatModels\/SY"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/channel",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/channelGroup",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/normal",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/notificationChannel",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/ownerGroup",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/publicChannel",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/publicGroup",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/publicThread",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/selfThread",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/unknown"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/id-7dy7z"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Decodable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Encodable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Equatable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Identifiable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatmodels\/threadtypes"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatModels/8Additive13SafeDecodableP": {
+  "identifier" : "doc:\/\/ChatModels\/8Additive13SafeDecodableP",
+  "title" : "Additive.SafeDecodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SE": {
+  "identifier" : "doc:\/\/ChatModels\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SH": {
+  "identifier" : "doc:\/\/ChatModels\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SQ": {
+  "identifier" : "doc:\/\/ChatModels\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SY": {
+  "identifier" : "doc:\/\/ChatModels\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/Se": {
+  "identifier" : "doc:\/\/ChatModels\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/documentation/ChatModels": {
+  "abstract" : [
+    {
+      "text" : "ChatModels consist of all base calsses in whih a client can have an interaction with them.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatModels",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes": {
+  "abstract" : [
+    {
+      "text" : "Type of thread.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ThreadTypes"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ThreadTypes"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ThreadTypes",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/decodable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/encodable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/equatable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/Identifiable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/Identifiable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Identifiable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/identifiable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/rawrepresentable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/channel": {
+  "abstract" : [
+    {
+      "text" : "Private Channel - Only the admin can send an invitation to someone to join this thread.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "channel"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/channel",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.channel",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/channel"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/channelGroup": {
+  "abstract" : [
+    {
+      "text" : "Private Channel only admin can send invitation to some one to join this thread.and Every one can send message to this thread.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "channelGroup"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/channelGroup",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.channelGroup",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/channelgroup"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/id-7dy7z": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10ChatModels11ThreadTypesO",
+      "text" : "ThreadTypes"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/id-7dy7z",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/id-7dy7z"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/init(rawvalue:)"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/normal": {
+  "abstract" : [
+    {
+      "text" : "This type can be P2P only 2 user or can be a Private group.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "normal"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/normal",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.normal",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/normal"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/notificationChannel": {
+  "abstract" : [
+    {
+      "text" : "Not implemented yet.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notificationChannel"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/notificationChannel",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.notificationChannel",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/notificationchannel"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/ownerGroup": {
+  "abstract" : [
+    {
+      "text" : "Specifice type of group - Not impelemented yet.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ownerGroup"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/ownerGroup",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.ownerGroup",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/ownergroup"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/publicChannel": {
+  "abstract" : [
+    {
+      "text" : "Everyone can join this channel and even users can get a history of this channel without joining it.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "publicChannel"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/publicChannel",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.publicChannel",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/publicchannel"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/publicGroup": {
+  "abstract" : [
+    {
+      "text" : "Everyone can join this or even can see message history of this thread without joining to the thread.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "publicGroup"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/publicGroup",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.publicGroup",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/publicgroup"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/publicThread": {
+  "abstract" : [
+    {
+      "text" : "Not implemented yet.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "publicThread"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/publicThread",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.publicThread",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/publicthread"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/selfThread": {
+  "abstract" : [
+    {
+      "text" : "Only one user with no other participant.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "selfThread"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/selfThread",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.selfThread",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/selfthread"
+},
+"doc://ChatModels/documentation/ChatModels/ThreadTypes/unknown": {
+  "abstract" : [
+    {
+      "text" : "Only when can’t decode a type.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unknown"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/ThreadTypes\/unknown",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ThreadTypes.unknown",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/threadtypes\/unknown"
+},
+"doc://ChatModels/s12CaseIterableP": {
+  "identifier" : "doc:\/\/ChatModels\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/s12IdentifiableP": {
+  "identifier" : "doc:\/\/ChatModels\/s12IdentifiableP",
+  "title" : "Swift.Identifiable",
+  "type" : "unresolvable"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

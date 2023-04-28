@@ -1,0 +1,718 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatModels\/documentation\/ChatModels"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:10ChatModels5RolesO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Roles"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatModels"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Roles"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Roles"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Roles"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/8Additive13SafeDecodableP",
+        "doc:\/\/ChatModels\/s12CaseIterableP",
+        "doc:\/\/ChatModels\/Se",
+        "doc:\/\/ChatModels\/SE",
+        "doc:\/\/ChatModels\/SQ",
+        "doc:\/\/ChatModels\/SH",
+        "doc:\/\/ChatModels\/s12IdentifiableP",
+        "doc:\/\/ChatModels\/SY"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/addNewUser",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/addRuleToUser",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/changeThreadInfo",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/deleteMessageOfOthers",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/editMessageOfOthers",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/editThread",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/ownership",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/postChannelMessage",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/readThread",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/removeRoleFromUser",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/removeUser",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/threadAdmin",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/unknown"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/id-3ftkg"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Decodable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Encodable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Equatable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Identifiable-Implementations",
+        "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatmodels\/roles"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatModels/8Additive13SafeDecodableP": {
+  "identifier" : "doc:\/\/ChatModels\/8Additive13SafeDecodableP",
+  "title" : "Additive.SafeDecodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SE": {
+  "identifier" : "doc:\/\/ChatModels\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SH": {
+  "identifier" : "doc:\/\/ChatModels\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SQ": {
+  "identifier" : "doc:\/\/ChatModels\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/SY": {
+  "identifier" : "doc:\/\/ChatModels\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/Se": {
+  "identifier" : "doc:\/\/ChatModels\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/documentation/ChatModels": {
+  "abstract" : [
+    {
+      "text" : "ChatModels consist of all base calsses in whih a client can have an interaction with them.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatModels",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels"
+},
+"doc://ChatModels/documentation/ChatModels/Roles": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Roles"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Roles"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Roles",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/decodable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/encodable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/equatable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/Identifiable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/Identifiable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Identifiable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/identifiable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/rawrepresentable-implementations"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/addNewUser": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "addNewUser"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/addNewUser",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.addNewUser",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/addnewuser"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/addRuleToUser": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "addRuleToUser"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/addRuleToUser",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.addRuleToUser",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/addruletouser"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/changeThreadInfo": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "changeThreadInfo"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/changeThreadInfo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.changeThreadInfo",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/changethreadinfo"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/deleteMessageOfOthers": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "deleteMessageOfOthers"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/deleteMessageOfOthers",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.deleteMessageOfOthers",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/deletemessageofothers"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/editMessageOfOthers": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "editMessageOfOthers"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/editMessageOfOthers",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.editMessageOfOthers",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/editmessageofothers"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/editThread": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "editThread"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/editThread",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.editThread",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/editthread"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/id-3ftkg": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10ChatModels5RolesO",
+      "text" : "Roles"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/id-3ftkg",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/id-3ftkg"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/init(rawvalue:)"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/ownership": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ownership"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/ownership",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.ownership",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/ownership"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/postChannelMessage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "postChannelMessage"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/postChannelMessage",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.postChannelMessage",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/postchannelmessage"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/readThread": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "readThread"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/readThread",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.readThread",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/readthread"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/removeRoleFromUser": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removeRoleFromUser"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/removeRoleFromUser",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.removeRoleFromUser",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/removerolefromuser"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/removeUser": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removeUser"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/removeUser",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.removeUser",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/removeuser"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/threadAdmin": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "threadAdmin"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/threadAdmin",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.threadAdmin",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/threadadmin"
+},
+"doc://ChatModels/documentation/ChatModels/Roles/unknown": {
+  "abstract" : [
+    {
+      "text" : "Only when can’t decode a type.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unknown"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatModels\/documentation\/ChatModels\/Roles\/unknown",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Roles.unknown",
+  "type" : "topic",
+  "url" : "\/documentation\/chatmodels\/roles\/unknown"
+},
+"doc://ChatModels/s12CaseIterableP": {
+  "identifier" : "doc:\/\/ChatModels\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://ChatModels/s12IdentifiableP": {
+  "identifier" : "doc:\/\/ChatModels\/s12IdentifiableP",
+  "title" : "Swift.Identifiable",
+  "type" : "unresolvable"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}
