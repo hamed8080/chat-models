@@ -1,12 +1,11 @@
 # ChatModels
-### A set of extensions to ease using of repetitive useful methods and variables.
-<img src="https://github.com/hamed8080/chatmodels/raw/main/images/icon.png"  width="64" height="64">
-<br />
+
+<h5>A package, full of models that are building blocks of Chat SDK.</h5>
+
+<img src="https://github.com/hamed8080/chat-models/raw/main/images/icon.png"  width="64" height="64">
 
 ## Features
-
 - [x] ChatModels is developed only for separating ui elements for [ChatApplication](https://github.com/hamed8080/chat-application) .
-<br/>
 
 ## Installation
 
@@ -15,7 +14,7 @@
 Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 
 ```swift
-.package(url: "https://github.com/hamed8080/chatmodels.git", .upToNextMinor(from: "1.0.0")),
+.package(url: "https://github.com/hamed8080/chat-models.git", .upToNextMinor(from: "1.0.0")),
 ```
 
 #### [CocoaPods](https://cocoapods.org) 
@@ -23,13 +22,12 @@ Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 Add in `Podfile`:
 
 ```ruby
-pod 'ChatModels'
+pod "chat-models", :git => 'http://pubgi.fanapsoft.ir/chat/ios/chat-models.git', :tag => '1.0.0'
 ```
 <br/>
 
-## [Documentation](https://hamed8080.gitlab.io/additive/documentation/chatmodels/)
-For more information about how to use ChatModels visit [Documentation](https://hamed8080.gitlab.io/additive/documentation/chatmodels/) 
-<br/>
+## [Documentation](https://hamed8080.github.io/chat-models/documentation/chatmodels/)
+For more information about how to use ChatModels visit [Documentation](https://hamed8080.github.io/chat-models/documentation/chatmodels/) 
 <br/>
 
 ## Contributing to ChatModels
