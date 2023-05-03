@@ -1,9 +1,8 @@
 //
-//  ChatModelTests.swift
-//  
+// ChatModelTests.swift
+// Copyright (c) 2022 ChatModels
 //
-//  Created by hamed on 4/26/23.
-//
+// Created by Hamed Hosseini on 12/14/22
 
 import XCTest
 

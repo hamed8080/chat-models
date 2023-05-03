@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ChatModels"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "ChatModels"
   s.description  = "A package, full of models that are building blocks of Chat SDK."
   s.homepage     = "https://pubgi.fanapsoft.ir/chat/ios/chat-models"
@@ -11,5 +11,4 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://pubgi.fanapsoft.ir/chat/ios/chat-models", :tag => s.version }
   s.source_files = "Sources/ChatModels/**/*.{h,swift,xcdatamodeld,m,momd}"
   s.frameworks  = "Foundation"
-  s.dependency "ChatCore" , '~> 1.0.0'
 end

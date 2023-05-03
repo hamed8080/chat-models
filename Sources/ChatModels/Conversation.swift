@@ -1,12 +1,9 @@
 //
-//  Conversation.swift
-//  Chat
+// Conversation.swift
+// Copyright (c) 2022 ChatModels
 //
-//  Created by hamed on 1/5/23.
-//
-//
+// Created by Hamed Hosseini on 12/14/22
 
-import CoreData
 import Foundation
 
 open class Conversation: Codable, Hashable, Identifiable {
@@ -185,7 +182,7 @@ open class Conversation: Codable, Hashable, Identifiable {
         inviter = try container.decodeIfPresent(Participant.self, forKey: .inviter)
         participants = try container.decodeIfPresent([Participant].self, forKey: .participants)
         lastMessageVO = try container.decodeIfPresent(Message.self, forKey: .lastMessageVO)
-        if let pinMessage = try container.decodeIfPresent(PinMessageVO.self, forKey: .pinMessageVO) {
+        if let pinMessage = try container.decodeIfPresent(PinMessage.self, forKey: .pinMessageVO) {
             pinMessage.threadId = id
             pinMessages = [pinMessage.message]
         }

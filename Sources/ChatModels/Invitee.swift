@@ -1,8 +1,8 @@
 //
 // Invitee.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatModels
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
@@ -14,5 +14,9 @@ open class Invitee: NSObject, Codable {
     public init(id: String?, idType: InviteeTypes?) {
         self.id = id
         self.idType = idType?.rawValue
+    }
+
+    public var inviteeTypes: InviteeTypes {
+        InviteeTypes(rawValue: idType ?? InviteeTypes.unknown.rawValue) ?? .unknown
     }
 }

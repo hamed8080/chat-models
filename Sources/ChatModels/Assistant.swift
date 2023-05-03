@@ -1,12 +1,9 @@
 //
-//  Assistant.swift
-//  Chat
+// Assistant.swift
+// Copyright (c) 2022 ChatModels
 //
-//  Created by hamed on 1/5/23.
-//
-//
+// Created by Hamed Hosseini on 12/14/22
 
-import CoreData
 import Foundation
 
 open class Assistant: Codable, Identifiable, Hashable {

@@ -14,7 +14,7 @@
 Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 
 ```swift
-.package(url: "https://github.com/hamed8080/chat-models.git", .upToNextMinor(from: "1.0.0")),
+.package(url: "https://github.com/hamed8080/chat-models.git", .upToNextMinor(from: "1.0.1")),
 ```
 
 #### [CocoaPods](https://cocoapods.org) 
@@ -22,7 +22,7 @@ Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 Add in `Podfile`:
 
 ```ruby
-pod "chat-models", :git => 'http://pubgi.fanapsoft.ir/chat/ios/chat-models.git', :tag => '1.0.0'
+pod "chat-models", :git => 'http://pubgi.fanapsoft.ir/chat/ios/chat-models.git', :tag => '1.0.1'
 ```
 <br/>
 

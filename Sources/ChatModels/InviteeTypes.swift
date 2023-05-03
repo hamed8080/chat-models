@@ -1,13 +1,12 @@
 //
 // InviteeTypes.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatModels
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
-import Additive
 import Foundation
 
-public enum InviteeTypes: Int, Codable, SafeDecodable {
+public enum InviteeTypes: Int, Codable, CaseIterable {
     case ssoId = 1
     case contactId = 2
     case cellphoneNumber = 3
@@ -19,4 +18,8 @@ public enum InviteeTypes: Int, Codable, SafeDecodable {
     ///
     /// Do not remove or move this property to the top of the enum, it must be the last enum because it uses ``SafeDecodable`` to decode the last item if no match found.
     case unknown
+
+    public init(from decoder: Decoder) throws {
+        self = try Self(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? Self.allCases.last!
+    }
 }

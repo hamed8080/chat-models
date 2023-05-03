@@ -1,14 +1,10 @@
 //
-//  QueueOfTextMessages.swift
-//  Chat
+// QueueOfTextMessages.swift
+// Copyright (c) 2022 ChatModels
 //
-//  Created by hamed on 1/5/23.
-//
-//
+// Created by Hamed Hosseini on 12/14/22
 
-import CoreData
 import Foundation
-import ChatCore
 
 open class QueueOfTextMessages: Codable, Identifiable, Hashable {
     public static func == (lhs: QueueOfTextMessages, rhs: QueueOfTextMessages) -> Bool {
