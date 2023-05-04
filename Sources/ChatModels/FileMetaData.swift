@@ -5,6 +5,7 @@
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
+
 public final class FileMetaData: Codable {
     public let file: FileDetail?
     public let fileHash: String?

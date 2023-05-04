@@ -16,4 +16,10 @@ public struct BotInfo: Decodable {
 
     /// List of commands.
     public var commandList: [String]?
+
+    public init(name: String? = nil, botUserId: Int? = nil, commandList: [String]? = nil) {
+        self.name = name
+        self.botUserId = botUserId
+        self.commandList = commandList
+    }
 }

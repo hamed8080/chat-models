@@ -37,7 +37,7 @@ open class PinMessage: Codable, Identifiable, Hashable {
         sender = try container.decodeIfPresent(Participant.self, forKey: .sender)
     }
 
-    enum CodingKeys: CodingKey {
+    private enum CodingKeys: CodingKey {
         case messageId
         case text
         case time

@@ -5,7 +5,6 @@
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatModels
 
 /// A bot object.
 public struct Bot: Codable {
@@ -24,5 +23,10 @@ public struct Bot: Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(apiToken, forKey: .apiToken)
         try container.encodeIfPresent(thing, forKey: .thing)
+    }
+
+    public init(apiToken: String? = nil, thing: Thing? = nil) {
+        self.apiToken = apiToken
+        self.thing = thing
     }
 }
