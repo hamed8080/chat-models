@@ -31,13 +31,20 @@ open class Assistant: Codable, Identifiable, Hashable {
         block = (try container?.decodeIfPresent(Bool.self, forKey: .block)) ?? false
     }
 
-    public init(id: Int? = nil, contactType: String? = nil, assistant: Invitee? = nil, participant: Participant? = nil, roles: [Roles]? = nil, block: Bool? = nil) {
+    public init(id: Int? = nil, contactType: String? = "default", assistant: Invitee? = nil, participant: Participant? = nil, roles: [Roles]? = nil, block: Bool? = nil) {
         self.id = id
         self.contactType = contactType
         self.assistant = assistant
         self.participant = participant
         self.roles = roles
         self.block = block
+    }
+
+    /// For registering an assistant.
+    public init(contactType: String? = "default", assistant: Invitee, roles: [Roles]) {
+        self.contactType = contactType
+        self.assistant = assistant
+        self.roles = roles
     }
 
     private enum CodingKeys: String, CodingKey {
