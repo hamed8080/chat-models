@@ -20,6 +20,7 @@ open class Message: Codable, Identifiable, Hashable {
     public var delivered: Bool?
     public var editable: Bool?
     public var edited: Bool?
+    /// Messages with the same ID cannot exist in two different threads since they are unique to the server.
     public var id: Int?
     public var mentioned: Bool?
     public var message: String?
