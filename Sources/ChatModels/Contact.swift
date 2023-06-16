@@ -77,6 +77,7 @@ open class Contact: Codable, Hashable, Identifiable {
 
     private enum CodingKeys: String, CodingKey {
         case blocked
+        case contactVO // only for block unblock
         case cellphoneNumber
         case email
         case firstName
