@@ -6,13 +6,9 @@
 
 import Foundation
 
-open class ReplyInfo: Codable, Hashable, Identifiable {
+open class ReplyInfo: NSObject, Codable, Identifiable {
     public static func == (lhs: ReplyInfo, rhs: ReplyInfo) -> Bool {
         lhs.repliedToMessageId == rhs.repliedToMessageId && lhs.message == rhs.message
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(repliedToMessageId)
     }
 
     public var deleted: Bool?

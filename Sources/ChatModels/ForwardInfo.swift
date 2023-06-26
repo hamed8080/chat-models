@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ForwardInfo: Codable {
+open class ForwardInfo: NSObject, Codable {
     public var conversation: Conversation?
     public var participant: Participant?
 
