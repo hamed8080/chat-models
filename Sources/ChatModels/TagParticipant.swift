@@ -26,9 +26,8 @@ open class TagParticipant: Codable, Hashable, Identifiable {
         id = try container.decodeIfPresent(Int.self, forKey: .id)
         active = try container.decodeIfPresent(Bool.self, forKey: .active)
         tagId = try container.decodeIfPresent(Int.self, forKey: .tagId)
-        if let threadId = try? container.decodeIfPresent(Int.self, forKey: .threadId) {
-            conversation = Conversation(id: threadId)
-        }
+        conversation = try? container.decodeIfPresent(Conversation.self, forKey: .conversation)
+        threadId = try? container.decodeIfPresent(Int.self, forKey: .threadId)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
     }
 
