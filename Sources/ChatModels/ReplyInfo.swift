@@ -17,7 +17,8 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
     public var messageType: MessageType?
     public var metadata: String?
     public var systemMetadata: String?
-    public var time: UInt?
+    public var repliedToMessageNanos: UInt?
+    public var repliedToMessageTime: UInt?
     public var participant: Participant?
 
     public required init(from decoder: Decoder) throws {
@@ -28,12 +29,9 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         metadata = try container.decodeIfPresent(String.self, forKey: .metadata)
         repliedToMessageId = try container.decodeIfPresent(Int.self, forKey: .repliedToMessageId)
         systemMetadata = try container.decodeIfPresent(String.self, forKey: .systemMetadata)
-        let repliedToMessageNanos = try container.decodeIfPresent(UInt.self, forKey: .repliedToMessageNanos)
-        let repliedToMessageTime = try container.decodeIfPresent(UInt.self, forKey: .repliedToMessageTime)
+        repliedToMessageNanos = try container.decodeIfPresent(UInt.self, forKey: .repliedToMessageNanos)
+        repliedToMessageTime = try container.decodeIfPresent(UInt.self, forKey: .repliedToMessageTime)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participant)
-        if let repliedToMessageTime = repliedToMessageTime, let repliedToMessageNanos = repliedToMessageNanos {
-            time = ((UInt(repliedToMessageTime / 1000) * 1_000_000_000) + repliedToMessageNanos)
-        }
     }
 
     public init(
@@ -43,7 +41,8 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         messageType: MessageType? = nil,
         metadata: String? = nil,
         systemMetadata: String? = nil,
-        time: UInt? = nil,
+        repliedToMessageNanos: UInt? = nil,
+        repliedToMessageTime: UInt? = nil,
         participant: Participant? = nil
     ) {
         self.deleted = deleted
@@ -52,7 +51,8 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         self.messageType = messageType
         self.metadata = metadata
         self.systemMetadata = systemMetadata
-        self.time = time
+        self.repliedToMessageNanos = repliedToMessageNanos
+        self.repliedToMessageTime = repliedToMessageTime
         self.participant = participant
     }
 
@@ -66,7 +66,6 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         case repliedToMessageNanos
         case repliedToMessageTime
         case participant
-        case time
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -77,7 +76,8 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         try container.encodeIfPresent(metadata, forKey: .metadata)
         try container.encodeIfPresent(repliedToMessageId, forKey: .repliedToMessageId)
         try container.encodeIfPresent(systemMetadata, forKey: .systemMetadata)
-        try container.encodeIfPresent(time, forKey: .time)
+        try container.encodeIfPresent(repliedToMessageTime, forKey: .repliedToMessageTime)
+        try container.encodeIfPresent(repliedToMessageNanos, forKey: .repliedToMessageNanos)
         try container.encodeIfPresent(participant, forKey: .participant)
     }
 }
