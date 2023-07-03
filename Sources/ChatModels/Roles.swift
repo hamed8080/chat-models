@@ -8,18 +8,19 @@ import Foundation
 
 public enum Roles: String, Codable, Identifiable, CaseIterable {
     public var id: Self { self }
-    case changeThreadInfo = "CHANGE_THREAD_INFO"
-    case postChannelMessage = "POST_CHANNEL_MESSAGE"
-    case editMessageOfOthers = "EDIT_MESSAGE_OF_OTHERS"
-    case deleteMessageOfOthers = "DELETE_MESSAGE_OF_OTHERS"
-    case addNewUser = "ADD_NEW_USER"
-    case removeUser = "REMOVE_USER"
-    case addRuleToUser = "ADD_RULE_TO_USER"
-    case removeRoleFromUser = "REMOVE_ROLE_FROM_USER"
-    case readThread = "READ_THREAD"
-    case editThread = "EDIT_THREAD"
-    case threadAdmin = "THREAD_ADMIN"
-    case ownership = "OWNERSHIP"
+    case changeThreadInfo = "change_thread_info"
+    case postChannelMessage = "post_channel_message"
+    case editMessageOfOthers = "edit_message_of_others"
+    case deleteMessageOfOthers = "delete_message_of_others"
+    case addNewUser = "add_new_user"
+    case removeUser = "remove_user"
+    case addRuleToUser = "add_rule_to_user"
+    case removeRoleFromUser = "remove_role_from_user"
+    case readThread = "read_thread"
+    case editThread = "edit_thread"
+    case threadAdmin = "thread_admin"
+    case ownership = "ownership"
+    case callAdmin = "call_admin"
 
     /// Only when can't decode a type.
     ///
@@ -28,6 +29,10 @@ public enum Roles: String, Codable, Identifiable, CaseIterable {
 
     public init(from decoder: Decoder) throws {
         self = try Self(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? Self.allCases.last!
+    }
+
+    public static var adminRoles: [Roles] {
+        Roles.allCases.filter{ $0 != .callAdmin && $0 != .unknown && $0 != .changeThreadInfo }
     }
 }
 
