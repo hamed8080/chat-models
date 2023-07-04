@@ -49,8 +49,14 @@ open class Message: Codable, Identifiable, Hashable {
         editable = try container.decodeIfPresent(Bool.self, forKey: .editable)
         edited = try container.decodeIfPresent(Bool.self, forKey: .edited)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
+        if let messageId = try container.decodeIfPresent(Int.self, forKey: .messageId) {
+            id = messageId
+        }
         mentioned = try container.decodeIfPresent(Bool.self, forKey: .mentioned)
         message = try container.decodeIfPresent(String.self, forKey: .message)
+        if let text = try container.decodeIfPresent(String.self, forKey: .text) {
+            message = text
+        }
         messageType = try container.decodeIfPresent(MessageType.self, forKey: .messageType)
         metadata = try container.decodeIfPresent(String.self, forKey: .metadata)
         pinned = try container.decodeIfPresent(Bool.self, forKey: .pinned)
@@ -63,6 +69,9 @@ open class Message: Codable, Identifiable, Hashable {
         conversation = try container.decodeIfPresent(Conversation.self, forKey: .conversation)
         forwardInfo = try container.decodeIfPresent(ForwardInfo.self, forKey: .forwardInfo)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participant)
+        if let pinSender = try container.decodeIfPresent(Participant.self, forKey: .sender) {
+            participant = pinSender
+        }
         ownerId = participant?.id
         replyInfo = try container.decodeIfPresent(ReplyInfo.self, forKey: .replyInfoVO)
         pinTime = time
@@ -145,6 +154,9 @@ open class Message: Codable, Identifiable, Hashable {
         case ownerId // only in Encode
         case replyInfo // only in Encode
         case threadId // only in Encode
+        case sender // Only for decoding in OnPin/Onunpin message responses
+        case messageId // Only for decoding in OnPin/Onunpin message responses
+        case text // Only for decoding in OnPin/Onunpin message responses
     }
 
     public func encode(to encoder: Encoder) throws {
