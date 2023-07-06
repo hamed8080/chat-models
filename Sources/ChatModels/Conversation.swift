@@ -13,7 +13,7 @@ open class Conversation: Codable, Hashable, Identifiable {
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(lastMessageVO)
-        hasher.combine(pinMessages)
+        hasher.combine(pinMessage)
         hasher.combine(mute)
         hasher.combine(admin)
         hasher.combine(isArchive)
@@ -62,7 +62,7 @@ open class Conversation: Codable, Hashable, Identifiable {
     public var lastMessageVO: Message?
     public var participants: [Participant]?
     public var isArchive: Bool?
-    public var pinMessages: [Message]?
+    public var pinMessage: PinMessage?
 
     public init(
         admin: Bool? = nil,
@@ -101,7 +101,7 @@ open class Conversation: Codable, Hashable, Identifiable {
         inviter: Participant? = nil,
         lastMessageVO: Message? = nil,
         participants: [Participant]? = nil,
-        pinMessages: [Message]? = nil,
+        pinMessage: PinMessage? = nil,
         isArchive: Bool? = nil
     ) {
         self.admin = admin
@@ -140,7 +140,7 @@ open class Conversation: Codable, Hashable, Identifiable {
         self.inviter = inviter
         self.lastMessageVO = lastMessageVO
         self.participants = participants
-        self.pinMessages = pinMessages
+        self.pinMessage = pinMessage
         self.isArchive = isArchive
     }
 
@@ -182,10 +182,7 @@ open class Conversation: Codable, Hashable, Identifiable {
         inviter = try container.decodeIfPresent(Participant.self, forKey: .inviter)
         participants = try container.decodeIfPresent([Participant].self, forKey: .participants)
         lastMessageVO = try container.decodeIfPresent(Message.self, forKey: .lastMessageVO)
-        if let pinMessage = try container.decodeIfPresent(PinMessage.self, forKey: .pinMessageVO) {
-            pinMessage.threadId = id
-            pinMessages = [pinMessage.message]
-        }
+        pinMessage = try container.decodeIfPresent(PinMessage.self, forKey: .pinMessageVO)
         isArchive = try container.decodeIfPresent(Bool.self, forKey: .archiveThread)
     }
 
