@@ -19,6 +19,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
     public var sender: Participant?
     public var notifyAll: Bool?
     public var metadata: String?
+    public var systemMetadata: String?
 
 
     public init(messageId: Int? = nil,
@@ -27,6 +28,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
                 timeNanos: UInt? = nil,
                 sender: Participant? = nil,
                 metaData: String? = nil,
+                systemMetadata: String? = nil,
                 notifyAll: Bool? = nil) {
         self.messageId = messageId
         self.text = text
@@ -35,6 +37,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
         self.sender = sender
         self.notifyAll = notifyAll
         self.metadata = metaData
+        self.systemMetadata = systemMetadata
     }
 
     public required init(from decoder: Decoder) throws {
@@ -46,6 +49,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
         sender = try container.decodeIfPresent(Participant.self, forKey: .sender)
         notifyAll = try container.decodeIfPresent(Bool.self, forKey: .notifyAll)
         metadata = try container.decodeIfPresent(String.self, forKey: .metadata)
+        systemMetadata = try container.decodeIfPresent(String.self, forKey: .systemMetadata)
     }
 
     public init(message: Message) {
@@ -56,6 +60,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
         sender = message.participant
         notifyAll = message.pinNotifyAll
         metadata = message.metadata
+        systemMetadata = message.systemMetadata
     }
 
     private enum CodingKeys: CodingKey {
@@ -66,6 +71,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
         case sender
         case notifyAll
         case metadata
+        case systemMetadata
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -77,9 +83,10 @@ open class PinMessage: NSObject, Codable, Identifiable {
         try container.encodeIfPresent(sender, forKey: .sender)
         try container.encodeIfPresent(notifyAll, forKey: .notifyAll)
         try container.encodeIfPresent(metadata, forKey: .metadata)
+        try container.encodeIfPresent(systemMetadata, forKey: .systemMetadata)
     }
 
     var message: Message {
-        Message(id: messageId, message: text, metadata: metadata, time: time, timeNanos: timeNanos, participant: sender, notifyAll: notifyAll)
+        Message(id: messageId, message: text, metadata: metadata, systemMetadata: systemMetadata, time: time, timeNanos: timeNanos, participant: sender, notifyAll: notifyAll)
     }
 }
