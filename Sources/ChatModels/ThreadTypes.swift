@@ -13,10 +13,11 @@ public enum ThreadTypes: Int, Codable, Identifiable, CaseIterable {
     /// This type can be P2P only 2 user or can be a Private group.
     /// - If it's a Private Group only the admin can add participants to it.
     /// - Everyone can send messages to this type of thread.
+    /// - If you create a private P2P thread with only two participants, and then add a new participant to the thread, it will automatically create a new empty thread with the newly added participant.
+    /// For example, if you initially have two participants and add a new participant to the thread, the chat server will automatically create a new thread with [group=true], and you will have three participants in this thread.
     case normal = 0
 
-    /// Specifice type of group - Not impelemented yet.
-    /// - Maybe in the future, this type has the ability to had an Owner as well as Admin.
+    /// Specifice type of group.
     /// - No difference between the normal group and owner group at the moment.
     case ownerGroup = 1
 
