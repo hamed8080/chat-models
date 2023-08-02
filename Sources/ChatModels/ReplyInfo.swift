@@ -20,6 +20,7 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
     public var repliedToMessageNanos: UInt?
     public var repliedToMessageTime: UInt?
     public var participant: Participant?
+    public var replyPrivatelyInfo: ReplyPrivatelyInfo?
 
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -32,6 +33,7 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         repliedToMessageNanos = try container.decodeIfPresent(UInt.self, forKey: .repliedToMessageNanos)
         repliedToMessageTime = try container.decodeIfPresent(UInt.self, forKey: .repliedToMessageTime)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participant)
+        replyPrivatelyInfo = try container.decodeIfPresent(ReplyPrivatelyInfo.self, forKey: .replyPrivatelyInfoVO)
     }
 
     public init(
@@ -66,6 +68,7 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
         case repliedToMessageNanos
         case repliedToMessageTime
         case participant
+        case replyPrivatelyInfoVO
     }
 
     public func encode(to encoder: Encoder) throws {
