@@ -16,7 +16,7 @@ open class Participant: Codable, Hashable, Identifiable {
     }
 
     public var admin: Bool?
-    /// It means taht the user is assistant or not.
+    /// It means that the user is an assistant or not.
     public var auditor: Bool?
     public var blocked: Bool?
     public var cellphoneNumber: String?
