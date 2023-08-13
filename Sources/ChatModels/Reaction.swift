@@ -17,18 +17,18 @@ open class Reaction: Codable, Hashable, Identifiable {
 
     public var id: Int?
     public var time: UInt?
-    public var reaction: String?
+    public var reaction: Int?
     public var participant: Participant?
 
     public required init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
-        reaction = try container.decodeIfPresent(String.self, forKey: .reaction)
+        reaction = try container.decodeIfPresent(Int.self, forKey: .reaction)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participantVO)
         time = try container.decodeIfPresent(UInt.self, forKey: .time)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
     }
 
-    public init(id: Int? = nil, reaction: String? = nil, participant: Participant? = nil, time: UInt? = nil) {
+    public init(id: Int? = nil, reaction: Int? = nil, participant: Participant? = nil, time: UInt? = nil) {
         self.id = id
         self.time = time
         self.reaction = reaction
