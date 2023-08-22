@@ -16,17 +16,17 @@ open class ReactionCountList: Decodable, Hashable, Identifiable {
     }
 
     public var messageId: Int?
-    public var reactions: [ReactionCount]?
+    public var reactionCounts: [ReactionCount]?
 
     public required init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
-        reactions = try container.decodeIfPresent([ReactionCount].self, forKey: .reactionCountVO)
+        reactionCounts = try container.decodeIfPresent([ReactionCount].self, forKey: .reactionCountVO)
     }
 
-    public init(messageId: Int? = nil, reactions: [ReactionCount]? = nil) {
+    public init(messageId: Int? = nil, reactionCounts: [ReactionCount]? = nil) {
         self.messageId = messageId
-        self.reactions = reactions
+        self.reactionCounts = reactionCounts
     }
 
     private enum CodingKeys: String, CodingKey {
