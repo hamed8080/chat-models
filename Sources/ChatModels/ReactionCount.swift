@@ -13,10 +13,12 @@ open class ReactionCount: Decodable, Hashable, Identifiable {
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(sticker)
+        hasher.combine(count)
     }
 
     public var sticker: Int?
     public var count: Int?
+    public var id: Int { hashValue }
 
     public required init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
