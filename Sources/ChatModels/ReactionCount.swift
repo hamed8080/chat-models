@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ReactionCount: Decodable, Hashable, Identifiable {
+open class ReactionCount: Codable, Hashable, Identifiable {
     public static func == (lhs: ReactionCount, rhs: ReactionCount) -> Bool {
         lhs.sticker == rhs.sticker
     }

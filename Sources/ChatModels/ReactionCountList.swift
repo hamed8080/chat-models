@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ReactionCountList: Decodable, Hashable, Identifiable {
+open class ReactionCountList: Codable, Hashable, Identifiable {
     public static func == (lhs: ReactionCountList, rhs: ReactionCountList) -> Bool {
         lhs.messageId == rhs.messageId
     }
@@ -32,5 +32,11 @@ open class ReactionCountList: Decodable, Hashable, Identifiable {
     private enum CodingKeys: String, CodingKey {
         case messageId
         case reactionCountVO
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(messageId, forKey: .messageId)
+        try container.encodeIfPresent(reactionCounts, forKey: .reactionCountVO)
     }
 }
