@@ -17,11 +17,14 @@ open class ReactionCountList: Codable, Hashable, Identifiable {
 
     public var messageId: Int?
     public var reactionCounts: [ReactionCount]?
+    /// Current user reaction on the message.
+    public var userReaction: Reaction?
 
     public required init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
         reactionCounts = try container.decodeIfPresent([ReactionCount].self, forKey: .reactionCountVO)
+        userReaction = try container.decodeIfPresent(Reaction.self, forKey: .userReaction)
     }
 
     public init(messageId: Int? = nil, reactionCounts: [ReactionCount]? = nil) {
@@ -32,6 +35,7 @@ open class ReactionCountList: Codable, Hashable, Identifiable {
     private enum CodingKeys: String, CodingKey {
         case messageId
         case reactionCountVO
+        case userReaction
     }
 
     public func encode(to encoder: Encoder) throws {
