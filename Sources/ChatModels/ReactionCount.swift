@@ -16,17 +16,17 @@ open class ReactionCount: Codable, Hashable, Identifiable {
         hasher.combine(count)
     }
 
-    public var sticker: Int?
+    public var sticker: Sticker?
     public var count: Int?
     public var id: Int { hashValue }
 
     public required init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
-        sticker = try container.decodeIfPresent(Int.self, forKey: .sticker)
+        sticker = try container.decodeIfPresent(Sticker.self, forKey: .sticker)
         count = try container.decodeIfPresent(Int.self, forKey: .count)
     }
 
-    public init(sticker: Int? = nil, count: Int? = nil) {
+    public init(sticker: Sticker? = nil, count: Int? = nil) {
         self.sticker = sticker
         self.count = count
     }
