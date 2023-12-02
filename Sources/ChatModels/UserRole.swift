@@ -22,7 +22,7 @@ open class UserRole: Codable, Hashable, Identifiable {
 
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        roles = try container.decode([Roles].self, forKey: .roles)
+        roles = try container.decodeIfPresent([Roles].self, forKey: .roles)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
         name = try container.decodeIfPresent(String.self, forKey: .name)
     }
