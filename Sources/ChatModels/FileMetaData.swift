@@ -14,6 +14,7 @@ public final class FileMetaData: Codable {
     public var latitude: Double?
     public var longitude: Double?
     public var reverse: String?
+    public var mapLink: String?
 
     public init(file: FileDetail,
                 fileHash: String? = nil,
@@ -21,7 +22,9 @@ public final class FileMetaData: Codable {
                 name: String? = nil,
                 latitude: Double? = nil,
                 longitude: Double? = nil,
-                reverse: String? = nil)
+                reverse: String? = nil,
+                mapLink: String? = nil
+    )
     {
         self.file = file
         self.fileHash = fileHash
@@ -30,6 +33,7 @@ public final class FileMetaData: Codable {
         self.longitude = longitude
         self.latitude = latitude
         self.reverse = reverse
+        self.mapLink = mapLink
     }
 }
 
