@@ -41,6 +41,7 @@ open class Message: Codable, Identifiable, Hashable {
     public var replyInfo: ReplyInfo?
     public var pinTime: UInt?
     public var pinNotifyAll: Bool?
+    public var callHistory: CallHistory?
 
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -76,6 +77,7 @@ open class Message: Codable, Identifiable, Hashable {
         replyInfo = try container.decodeIfPresent(ReplyInfo.self, forKey: .replyInfoVO)
         pinTime = time
         pinNotifyAll = try container.decodeIfPresent(Bool.self, forKey: .notifyAll)
+        callHistory = try container.decodeIfPresent(CallHistory.self, forKey: .callHistoryVO)
     }
 
     public init(threadId: Int? = nil,
@@ -101,7 +103,8 @@ open class Message: Codable, Identifiable, Hashable {
                 participant: Participant? = nil,
                 replyInfo: ReplyInfo? = nil,
                 pinTime: UInt? = nil,
-                notifyAll: Bool? = nil)
+                notifyAll: Bool? = nil,
+                callHistoryVO: CallHistory? = nil)
     {
         self.threadId = threadId
         self.deletable = deletable
@@ -127,6 +130,7 @@ open class Message: Codable, Identifiable, Hashable {
         self.replyInfo = replyInfo
         pinNotifyAll = notifyAll
         self.pinTime = pinTime
+        self.callHistory = callHistoryVO
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -151,6 +155,7 @@ open class Message: Codable, Identifiable, Hashable {
         case forwardInfo
         case participant
         case replyInfoVO
+        case callHistoryVO
         case ownerId // only in Encode
         case replyInfo // only in Encode
         case threadId // only in Encode
@@ -182,5 +187,6 @@ open class Message: Codable, Identifiable, Hashable {
         try container.encodeIfPresent(forwardInfo, forKey: .forwardInfo)
         try container.encodeIfPresent(participant, forKey: .participant)
         try container.encodeIfPresent(replyInfo, forKey: .replyInfo)
+        try container.encodeIfPresent(callHistory, forKey: .callHistoryVO)
     }
 }
