@@ -27,9 +27,10 @@ open class ReactionCountList: Codable, Hashable, Identifiable {
         userReaction = try container.decodeIfPresent(Reaction.self, forKey: .userReaction)
     }
 
-    public init(messageId: Int? = nil, reactionCounts: [ReactionCount]? = nil) {
+    public init(messageId: Int? = nil, reactionCounts: [ReactionCount]? = nil, userReaction: Reaction?) {
         self.messageId = messageId
         self.reactionCounts = reactionCounts
+        self.userReaction = userReaction
     }
 
     private enum CodingKeys: String, CodingKey {
