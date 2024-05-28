@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class UserRole: Codable, Hashable, Identifiable {
+public struct UserRole: Codable, Hashable, Identifiable {
     public static func == (lhs: UserRole, rhs: UserRole) -> Bool {
         lhs.threadId == rhs.threadId
     }
@@ -20,7 +20,7 @@ open class UserRole: Codable, Hashable, Identifiable {
     public var id: Int?
     public var name: String?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         roles = try container.decodeIfPresent([Roles].self, forKey: .roles)
         id = try container.decodeIfPresent(Int.self, forKey: .id)

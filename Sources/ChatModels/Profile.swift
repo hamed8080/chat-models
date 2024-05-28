@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class Profile: Codable {
+public struct Profile: Codable {
     public var bio: String?
     public var metadata: String?
 
@@ -20,7 +20,7 @@ open class Profile: Codable {
         case metadata
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         bio = try container.decodeIfPresent(String.self, forKey: .bio)
         metadata = try container.decodeIfPresent(String.self, forKey: .metadata)

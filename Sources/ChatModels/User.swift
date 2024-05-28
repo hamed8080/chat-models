@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class User: Codable, Hashable, Identifiable {
+public struct User: Codable, Hashable, Identifiable {
     public static func == (lhs: User, rhs: User) -> Bool {
         lhs.id == rhs.id
     }
@@ -31,7 +31,7 @@ open class User: Codable, Hashable, Identifiable {
     public var firstName: String?
     public var nickname: String?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         cellphoneNumber = try container.decodeIfPresent(String.self, forKey: .cellphoneNumber)
         coreUserId = try container.decodeIfPresent(Int.self, forKey: .coreUserId)

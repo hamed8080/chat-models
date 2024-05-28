@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class QueueOfFileMessages: Codable, Hashable, Identifiable {
+public struct QueueOfFileMessages: Codable, Hashable, Identifiable {
     public static func == (lhs: QueueOfFileMessages, rhs: QueueOfFileMessages) -> Bool {
         lhs.uniqueId == rhs.uniqueId
     }
@@ -14,7 +14,8 @@ open class QueueOfFileMessages: Codable, Hashable, Identifiable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(uniqueId)
     }
-
+    
+    public var id: String? { uniqueId }
     public var fileExtension: String?
     public var fileName: String?
     public var isPublic: Bool?
@@ -57,7 +58,7 @@ open class QueueOfFileMessages: Codable, Hashable, Identifiable {
         case yC
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         fileExtension = try container.decodeIfPresent(String.self, forKey: .fileExtension)
         fileName = try container.decodeIfPresent(String.self, forKey: .fileName)

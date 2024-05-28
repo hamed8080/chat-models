@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class PinMessage: NSObject, Codable, Identifiable {
+public struct PinMessage: Codable, Identifiable, Hashable {
     public static func == (lhs: PinMessage, rhs: PinMessage) -> Bool {
         lhs.messageId == rhs.messageId
     }
@@ -40,7 +40,7 @@ open class PinMessage: NSObject, Codable, Identifiable {
         self.systemMetadata = systemMetadata
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
         text = try container.decodeIfPresent(String.self, forKey: .text)

@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ReactionList: Decodable, Hashable, Identifiable {
+public struct ReactionList: Decodable, Hashable, Identifiable {
     public static func == (lhs: ReactionList, rhs: ReactionList) -> Bool {
         lhs.messageId == rhs.messageId
     }
@@ -14,11 +14,11 @@ open class ReactionList: Decodable, Hashable, Identifiable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(messageId)
     }
-
+    public var id: Int? { messageId }
     public var messageId: Int?
     public var reactions: [Reaction]?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
         reactions = try container.decodeIfPresent([Reaction].self, forKey: .reactionVOList)

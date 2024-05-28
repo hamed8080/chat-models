@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ReactionCount: Codable, Hashable, Identifiable {
+public struct ReactionCount: Codable, Hashable, Identifiable {
     public static func == (lhs: ReactionCount, rhs: ReactionCount) -> Bool {
         lhs.sticker == rhs.sticker
     }
@@ -20,7 +20,7 @@ open class ReactionCount: Codable, Hashable, Identifiable {
     public var count: Int?
     public var id: Int { hashValue }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         sticker = try container.decodeIfPresent(Sticker.self, forKey: .sticker)
         count = try container.decodeIfPresent(Int.self, forKey: .count)

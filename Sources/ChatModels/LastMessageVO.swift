@@ -1,13 +1,13 @@
 //
-// Message.swift
+// LastMessageVO.swift
 // Copyright (c) 2022 ChatModels
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-public struct Message: Codable, Identifiable, Hashable {
-    public static func == (lhs: Message, rhs: Message) -> Bool {
+public struct LastMessageVO: Codable, Identifiable, Hashable {
+    public static func == (lhs: LastMessageVO, rhs: LastMessageVO) -> Bool {
         lhs.id == rhs.id && lhs.uniqueId == rhs.uniqueId
     }
 
@@ -35,7 +35,6 @@ public struct Message: Codable, Identifiable, Hashable {
     public var time: UInt?
     public var timeNanos: UInt?
     public var uniqueId: String?
-    public var conversation: Conversation?
     public var forwardInfo: ForwardInfo?
     public var participant: Participant?
     public var replyInfo: ReplyInfo?
@@ -67,7 +66,6 @@ public struct Message: Codable, Identifiable, Hashable {
         time = try container.decodeIfPresent(UInt.self, forKey: .time)
         timeNanos = try container.decodeIfPresent(UInt.self, forKey: .timeNanos)
         uniqueId = try container.decodeIfPresent(String.self, forKey: .uniqueId)
-        conversation = try container.decodeIfPresent(Conversation.self, forKey: .conversation)
         forwardInfo = try container.decodeIfPresent(ForwardInfo.self, forKey: .forwardInfo)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participant)
         if let pinSender = try container.decodeIfPresent(Participant.self, forKey: .sender) {
@@ -124,7 +122,6 @@ public struct Message: Codable, Identifiable, Hashable {
         self.time = time
         self.timeNanos = timeNanos
         self.uniqueId = uniqueId
-        self.conversation = conversation
         self.forwardInfo = forwardInfo
         self.participant = participant
         self.replyInfo = replyInfo
@@ -183,7 +180,6 @@ public struct Message: Codable, Identifiable, Hashable {
         try container.encodeIfPresent(time, forKey: .time)
         try container.encodeIfPresent(timeNanos, forKey: .timeNanos)
         try container.encodeIfPresent(uniqueId, forKey: .uniqueId)
-        try container.encodeIfPresent(conversation, forKey: .conversation)
         try container.encodeIfPresent(forwardInfo, forKey: .forwardInfo)
         try container.encodeIfPresent(participant, forKey: .participant)
         try container.encodeIfPresent(replyInfo, forKey: .replyInfo)
@@ -191,9 +187,9 @@ public struct Message: Codable, Identifiable, Hashable {
     }
 }
 
-public extension Message {
-    var toLastMessageVO: LastMessageVO {
-        let lastMessageVO = LastMessageVO(threadId: threadId,
+public extension LastMessageVO {
+    var toMessage: Message {
+        let messageVO = Message(threadId: threadId,
                                 deletable: deletable,
                                 delivered: delivered,
                                 editable: editable,
@@ -218,6 +214,6 @@ public extension Message {
                                 pinTime: pinTime,
                                 notifyAll: pinNotifyAll,
                                 callHistoryVO: callHistory)
-        return lastMessageVO
+        return messageVO
     }
 }

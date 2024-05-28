@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class CallHistory: Codable, Hashable, Identifiable {
+public struct CallHistory: Codable, Hashable, Identifiable {
     public static func == (lhs: CallHistory, rhs: CallHistory) -> Bool {
         lhs.id == rhs.id
     }
@@ -24,7 +24,7 @@ open class CallHistory: Codable, Hashable, Identifiable {
     public var status: CallStatus?
     public var isGroup: Bool?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         id = try container.decodeIfPresent(Int.self, forKey: .id)
         creatorId = try container.decodeIfPresent(Int.self, forKey: .creatorId)

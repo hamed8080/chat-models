@@ -6,8 +6,8 @@
 
 import Foundation
 
-open class ForwardInfo: NSObject, Codable {
-    public var conversation: Conversation?
+public struct ForwardInfo: Codable {
+    public var conversation: ForwardInfoConversation?
     public var participant: Participant?
 
     private enum CodingKeys: String, CodingKey {
@@ -15,13 +15,13 @@ open class ForwardInfo: NSObject, Codable {
         case participant
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        conversation = try container.decodeIfPresent(Conversation.self, forKey: .conversation)
+        conversation = try container.decodeIfPresent(ForwardInfoConversation.self, forKey: .conversation)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participant)
     }
 
-    public init(conversation: Conversation?, participant: Participant?) {
+    public init(conversation: ForwardInfoConversation?, participant: Participant?) {
         self.conversation = conversation
         self.participant = participant
     }

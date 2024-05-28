@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class Image: Codable, Hashable, Identifiable {
+public struct Image: Codable, Hashable, Identifiable {
     public static func == (lhs: Image, rhs: Image) -> Bool {
         lhs.id == rhs.id
     }
@@ -34,7 +34,7 @@ open class Image: Codable, Hashable, Identifiable {
         case width
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         actualWidth = try container.decodeIfPresent(Int.self, forKey: .actualWidth)
         actualHeight = try container.decodeIfPresent(Int.self, forKey: .actualHeight)

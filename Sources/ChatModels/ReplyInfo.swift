@@ -6,11 +6,12 @@
 
 import Foundation
 
-open class ReplyInfo: NSObject, Codable, Identifiable {
+public struct ReplyInfo: Codable, Identifiable {
     public static func == (lhs: ReplyInfo, rhs: ReplyInfo) -> Bool {
         lhs.repliedToMessageId == rhs.repliedToMessageId && lhs.message == rhs.message
     }
 
+    public var id: Int? { repliedToMessageId }
     public var deleted: Bool?
     public var repliedToMessageId: Int?
     public var message: String?
@@ -22,7 +23,7 @@ open class ReplyInfo: NSObject, Codable, Identifiable {
     public var participant: Participant?
     public var replyPrivatelyInfo: ReplyPrivatelyInfo?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         deleted = try container.decodeIfPresent(Bool.self, forKey: .deleted)
         message = try container.decodeIfPresent(String.self, forKey: .message)

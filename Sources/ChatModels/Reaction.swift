@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class Reaction: Codable, Hashable, Identifiable {
+public struct Reaction: Codable, Hashable, Identifiable {
     public static func == (lhs: Reaction, rhs: Reaction) -> Bool {
         lhs.id == rhs.id
     }
@@ -20,7 +20,7 @@ open class Reaction: Codable, Hashable, Identifiable {
     public var reaction: Sticker?
     public var participant: Participant?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         reaction = try container.decodeIfPresent(Sticker.self, forKey: .reaction)
         participant = try container.decodeIfPresent(Participant.self, forKey: .participantVO)

@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class Assistant: Codable, Identifiable, Hashable {
+public struct Assistant: Codable, Identifiable, Hashable {
     public static func == (lhs: Assistant, rhs: Assistant) -> Bool {
         lhs.id == rhs.id
     }
@@ -22,7 +22,7 @@ open class Assistant: Codable, Identifiable, Hashable {
     public var roles: [Roles]?
     public var block: Bool?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try? decoder.container(keyedBy: CodingKeys.self)
         contactType = try container?.decodeIfPresent(String.self, forKey: .contactType)
         assistant = try container?.decodeIfPresent(Invitee.self, forKey: .assistant)

@@ -9,20 +9,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ChatModels"
-               BuildableName = "ChatModels"
-               BlueprintName = "ChatModels"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -31,6 +17,20 @@
                BlueprintIdentifier = "ChatModelsTests"
                BuildableName = "ChatModelsTests"
                BlueprintName = "ChatModelsTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ChatModels"
+               BuildableName = "ChatModels"
+               BlueprintName = "ChatModels"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -80,9 +80,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ChatModels"
-            BuildableName = "ChatModels"
-            BlueprintName = "ChatModels"
+            BlueprintIdentifier = "ChatModelsTests"
+            BuildableName = "ChatModelsTests"
+            BlueprintName = "ChatModelsTests"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class Participant: Codable, Hashable, Identifiable {
+public struct Participant: Codable, Hashable, Identifiable {
     public static func == (lhs: Participant, rhs: Participant) -> Bool {
         lhs.id == rhs.id
     }
@@ -41,7 +41,7 @@ open class Participant: Codable, Hashable, Identifiable {
     public var sendEnable: Bool?
     public var username: String?
     public var chatProfileVO: Profile?
-    public var conversation: Conversation?
+    public var conversation: ParticipantConversation?
     public init(
         admin: Bool? = nil,
         auditor: Bool? = nil,
@@ -68,7 +68,7 @@ open class Participant: Codable, Hashable, Identifiable {
         sendEnable: Bool? = nil,
         username: String? = nil,
         chatProfileVO: Profile? = nil,
-        conversation: Conversation? = nil
+        conversation: ParticipantConversation? = nil
     ) {
         self.admin = admin
         self.auditor = auditor
@@ -127,7 +127,7 @@ open class Participant: Codable, Hashable, Identifiable {
         case conversation
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         admin = try container.decodeIfPresent(Bool.self, forKey: .admin)
         auditor = try container.decodeIfPresent(Bool.self, forKey: .auditor)
@@ -154,6 +154,53 @@ open class Participant: Codable, Hashable, Identifiable {
         username = try container.decodeIfPresent(String.self, forKey: .username)
         chatProfileVO = try container.decodeIfPresent(Profile.self, forKey: .chatProfileVO)
         roles = try container.decodeIfPresent([Roles].self, forKey: .roles)
-        conversation = try container.decodeIfPresent(Conversation.self, forKey: .conversation)
+        conversation = try container.decodeIfPresent(ParticipantConversation.self, forKey: .conversation)
+    }
+
+    public func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try? container.encodeIfPresent(admin, forKey: .admin)
+        try? container.encodeIfPresent(auditor, forKey: .auditor)
+        try? container.encodeIfPresent(blocked, forKey: .blocked)
+        try? container.encodeIfPresent(cellphoneNumber, forKey: .cellphoneNumber)
+        try? container.encodeIfPresent(contactFirstName, forKey: .contactFirstName)
+        try? container.encodeIfPresent(contactId, forKey: .contactId)
+        try? container.encodeIfPresent(contactName, forKey: .contactName)
+        try? container.encodeIfPresent(contactLastName, forKey: .contactLastName)
+        try? container.encodeIfPresent(coreUserId, forKey: .coreUserId)
+        try? container.encodeIfPresent(email, forKey: .email)
+        try? container.encodeIfPresent(firstName, forKey: .firstName)
+        try? container.encodeIfPresent(id, forKey: .id)
+        try? container.encodeIfPresent(ssoId, forKey: .ssoId)
+        try? container.encodeIfPresent(image, forKey: .image)
+        try? container.encodeIfPresent(keyId, forKey: .keyId)
+        try? container.encodeIfPresent(lastName, forKey: .lastName)
+        try? container.encodeIfPresent(myFriend, forKey: .myFriend)
+        try? container.encodeIfPresent(name, forKey: .name)
+        try? container.encodeIfPresent(notSeenDuration, forKey: .notSeenDuration)
+        try? container.encodeIfPresent(online, forKey: .online)
+        try? container.encodeIfPresent(receiveEnable, forKey: .receiveEnable)
+        try? container.encodeIfPresent(sendEnable, forKey: .sendEnable)
+        try? container.encodeIfPresent(username, forKey: .username)
+        try? container.encodeIfPresent(chatProfileVO, forKey: .chatProfileVO)
+        try? container.encodeIfPresent(roles, forKey: .roles)
+        try? container.encodeIfPresent(conversation, forKey: .conversation)
+    }
+}
+
+public extension Conversation {
+    var toParticipantConversation: ParticipantConversation {
+        let conPart = ParticipantConversation(
+            description : description,
+            group : group,
+            id : id,
+            image : image,
+            metadata : metadata,
+            participantCount : participantCount,
+            title : title,
+            type : type,
+            uniqueName : uniqueName,
+            userGroupHash : userGroupHash)
+        return conPart
     }
 }

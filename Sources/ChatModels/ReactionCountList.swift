@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ReactionCountList: Codable, Hashable, Identifiable {
+public struct ReactionCountList: Codable, Hashable, Identifiable {
     public static func == (lhs: ReactionCountList, rhs: ReactionCountList) -> Bool {
         lhs.messageId == rhs.messageId
     }
@@ -15,12 +15,13 @@ open class ReactionCountList: Codable, Hashable, Identifiable {
         hasher.combine(messageId)
     }
 
+    public var id: Int? { messageId }
     public var messageId: Int?
     public var reactionCounts: [ReactionCount]?
     /// Current user reaction on the message.
     public var userReaction: Reaction?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         guard let container = try? decoder.container(keyedBy: CodingKeys.self) else { return }
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
         reactionCounts = try container.decodeIfPresent([ReactionCount].self, forKey: .reactionCountVO)

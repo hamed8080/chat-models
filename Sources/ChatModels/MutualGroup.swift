@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class MutualGroup: Codable, Identifiable, Hashable {
+public struct MutualGroup: Codable, Hashable {
     public static func == (lhs: MutualGroup, rhs: MutualGroup) -> Bool {
         lhs.mutualId == rhs.mutualId
     }
@@ -14,6 +14,7 @@ open class MutualGroup: Codable, Identifiable, Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(mutualId)
     }
+
 
     public var mutualId: String?
     public var idType: InviteeTypes?
@@ -24,7 +25,7 @@ open class MutualGroup: Codable, Identifiable, Hashable {
         case conversations
     }
 
-    public required init(from _: Decoder) throws {}
+    public init(from _: Decoder) throws {}
 
     public init(idType: InviteeTypes, mutualId: String?, conversations: [Conversation]? = nil) {
         self.mutualId = mutualId

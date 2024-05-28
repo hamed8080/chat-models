@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class ReplyPrivatelyInfo: NSObject, Codable, Identifiable {
+public struct ReplyPrivatelyInfo: Codable {
     public static func == (lhs: ReplyPrivatelyInfo, rhs: ReplyPrivatelyInfo) -> Bool {
         lhs.threadId == rhs.threadId && lhs.threadName == rhs.threadName
     }
@@ -14,7 +14,7 @@ open class ReplyPrivatelyInfo: NSObject, Codable, Identifiable {
     public var threadId: Int?
     public var threadName: String?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         threadId = try container.decodeIfPresent(Int.self, forKey: .threadId)
         threadName = try container.decodeIfPresent(String.self, forKey: .threadName)

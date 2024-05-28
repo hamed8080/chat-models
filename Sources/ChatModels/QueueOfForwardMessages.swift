@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class QueueOfForwardMessages: Codable, Hashable, Identifiable {
+public struct QueueOfForwardMessages: Codable, Hashable, Identifiable {
     public static func == (lhs: QueueOfForwardMessages, rhs: QueueOfForwardMessages) -> Bool {
         lhs.fromThreadId == rhs.fromThreadId
     }
@@ -15,6 +15,7 @@ open class QueueOfForwardMessages: Codable, Hashable, Identifiable {
         hasher.combine(fromThreadId)
     }
 
+    public var id: String? { uniqueIds?.joined(separator: ",") }
     public var fromThreadId: Int?
     public var messageIds: [Int]?
     public var threadId: Int?
@@ -29,7 +30,7 @@ open class QueueOfForwardMessages: Codable, Hashable, Identifiable {
         case uniqueIds
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         fromThreadId = try container.decodeIfPresent(Int.self, forKey: .fromThreadId)
         messageIds = try container.decodeIfPresent([Int].self, forKey: .messageIds)

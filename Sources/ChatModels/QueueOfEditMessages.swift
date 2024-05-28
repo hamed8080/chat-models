@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class QueueOfEditMessages: Codable, Hashable, Identifiable {
+public struct QueueOfEditMessages: Codable, Hashable, Identifiable {
     public static func == (lhs: QueueOfEditMessages, rhs: QueueOfEditMessages) -> Bool {
         lhs.uniqueId == rhs.uniqueId
     }
@@ -15,6 +15,7 @@ open class QueueOfEditMessages: Codable, Hashable, Identifiable {
         hasher.combine(uniqueId)
     }
 
+    public var id: String? { uniqueId }
     public var messageId: Int?
     public var messageType: MessageType?
     public var metadata: String?
@@ -35,7 +36,7 @@ open class QueueOfEditMessages: Codable, Hashable, Identifiable {
         case uniqueId
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
         messageType = try container.decodeIfPresent(MessageType.self, forKey: .messageType)

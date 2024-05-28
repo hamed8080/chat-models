@@ -6,7 +6,7 @@
 
 import Foundation
 
-public final class FileMetaData: Codable {
+public struct FileMetaData: Codable {
     public let file: FileDetail?
     public let fileHash: String?
     public let hashCode: String?
@@ -37,7 +37,7 @@ public final class FileMetaData: Codable {
     }
 }
 
-public final class FileDetail: Codable {
+public struct FileDetail: Codable {
     public let actualHeight: Int?
     public let actualWidth: Int?
     public let `extension`: String?

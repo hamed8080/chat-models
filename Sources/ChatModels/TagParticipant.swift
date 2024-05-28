@@ -6,7 +6,7 @@
 
 import Foundation
 
-open class TagParticipant: Codable, Hashable, Identifiable {
+public struct TagParticipant: Codable, Hashable, Identifiable {
     public static func == (lhs: TagParticipant, rhs: TagParticipant) -> Bool {
         lhs.id == rhs.id
     }
@@ -21,7 +21,7 @@ open class TagParticipant: Codable, Hashable, Identifiable {
     public var threadId: Int?
     public var conversation: Conversation?
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
         active = try container.decodeIfPresent(Bool.self, forKey: .active)
