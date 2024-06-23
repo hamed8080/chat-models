@@ -7,10 +7,6 @@
 import Foundation
 
 public struct PinMessage: Codable, Identifiable, Hashable {
-    public static func == (lhs: PinMessage, rhs: PinMessage) -> Bool {
-        lhs.messageId == rhs.messageId
-    }
-
     public var id: Int? { messageId }
     public var messageId: Int?
     public var text: String?

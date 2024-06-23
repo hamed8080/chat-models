@@ -6,11 +6,7 @@
 
 import Foundation
 
-public struct ReplyPrivatelyInfo: Codable {
-    public static func == (lhs: ReplyPrivatelyInfo, rhs: ReplyPrivatelyInfo) -> Bool {
-        lhs.threadId == rhs.threadId && lhs.threadName == rhs.threadName
-    }
-
+public struct ReplyPrivatelyInfo: Codable, Hashable {
     public var threadId: Int?
     public var threadName: String?
 

@@ -7,15 +7,6 @@
 import Foundation
 
 public struct ReactionCount: Codable, Hashable, Identifiable {
-    public static func == (lhs: ReactionCount, rhs: ReactionCount) -> Bool {
-        lhs.sticker == rhs.sticker
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(sticker)
-        hasher.combine(count)
-    }
-
     public var sticker: Sticker?
     public var count: Int?
     public var id: Int { hashValue }

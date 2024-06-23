@@ -7,14 +7,6 @@
 import Foundation
 
 public struct Participant: Codable, Hashable, Identifiable {
-    public static func == (lhs: Participant, rhs: Participant) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
     public var admin: Bool?
     /// It means that the user is an assistant or not.
     public var auditor: Bool?

@@ -7,15 +7,6 @@
 import Foundation
 
 public struct LastMessageVO: Codable, Identifiable, Hashable {
-    public static func == (lhs: LastMessageVO, rhs: LastMessageVO) -> Bool {
-        lhs.id == rhs.id && lhs.uniqueId == rhs.uniqueId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-        hasher.combine(uniqueId)
-    }
-
     public var deletable: Bool?
     public var delivered: Bool?
     public var editable: Bool?

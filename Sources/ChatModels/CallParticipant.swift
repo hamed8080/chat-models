@@ -7,10 +7,6 @@
 import Foundation
 
 public struct CallParticipant: Codable, Equatable {
-    public static func == (lhs: CallParticipant, rhs: CallParticipant) -> Bool {
-        lhs.userId == rhs.userId
-    }
-
     public var joinTime: Int?
     public var leaveTime: Int?
     public var userId: Int?

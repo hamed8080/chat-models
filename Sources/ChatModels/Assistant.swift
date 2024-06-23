@@ -8,11 +8,21 @@ import Foundation
 
 public struct Assistant: Codable, Identifiable, Hashable {
     public static func == (lhs: Assistant, rhs: Assistant) -> Bool {
-        lhs.id == rhs.id
+        lhs.id == rhs.id &&
+        lhs.contactType == rhs.contactType &&
+        lhs.assistant == rhs.assistant &&
+        lhs.participant == rhs.participant &&
+        lhs.roles == rhs.roles &&
+        lhs.block == rhs.block
     }
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
+        hasher.combine(contactType)
+        hasher.combine(assistant)
+        hasher.combine(participant)
+        hasher.combine(roles)
+        hasher.combine(block)
     }
 
     public var id: Int?

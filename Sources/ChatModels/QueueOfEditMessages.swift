@@ -7,14 +7,6 @@
 import Foundation
 
 public struct QueueOfEditMessages: Codable, Hashable, Identifiable {
-    public static func == (lhs: QueueOfEditMessages, rhs: QueueOfEditMessages) -> Bool {
-        lhs.uniqueId == rhs.uniqueId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(uniqueId)
-    }
-
     public var id: String? { uniqueId }
     public var messageId: Int?
     public var messageType: MessageType?

@@ -7,14 +7,6 @@
 import Foundation
 
 public struct QueueOfForwardMessages: Codable, Hashable, Identifiable {
-    public static func == (lhs: QueueOfForwardMessages, rhs: QueueOfForwardMessages) -> Bool {
-        lhs.fromThreadId == rhs.fromThreadId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(fromThreadId)
-    }
-
     public var id: String? { uniqueIds?.joined(separator: ",") }
     public var fromThreadId: Int?
     public var messageIds: [Int]?

@@ -6,15 +6,7 @@
 
 import Foundation
 
-public struct QueueOfFileMessages: Codable, Hashable, Identifiable {
-    public static func == (lhs: QueueOfFileMessages, rhs: QueueOfFileMessages) -> Bool {
-        lhs.uniqueId == rhs.uniqueId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(uniqueId)
-    }
-    
+public struct QueueOfFileMessages: Codable, Hashable, Identifiable {    
     public var id: String? { uniqueId }
     public var fileExtension: String?
     public var fileName: String?

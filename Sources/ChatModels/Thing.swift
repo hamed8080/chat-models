@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct Thing: Codable {
+public struct Thing: Codable, Hashable {
     public var id: Int? // its thing id of relevant thing of this bot in SSO
     public var name: String? // bot name
     public var title: String? // bot name

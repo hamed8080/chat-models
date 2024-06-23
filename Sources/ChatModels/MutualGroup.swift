@@ -7,15 +7,6 @@
 import Foundation
 
 public struct MutualGroup: Codable, Hashable {
-    public static func == (lhs: MutualGroup, rhs: MutualGroup) -> Bool {
-        lhs.mutualId == rhs.mutualId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(mutualId)
-    }
-
-
     public var mutualId: String?
     public var idType: InviteeTypes?
     public var conversations: [Conversation]?

@@ -7,14 +7,6 @@
 import Foundation
 
 public struct File: Codable, Identifiable, Hashable {
-    public static func == (lhs: File, rhs: File) -> Bool {
-        lhs.hashCode == rhs.hashCode
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(hashCode)
-    }
-    
     public var id: String? { hashCode }
     public var hashCode: String?
     public var name: String?

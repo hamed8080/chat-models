@@ -7,14 +7,6 @@
 import Foundation
 
 public struct Contact: Codable, Hashable, Identifiable {
-    public static func == (lhs: Contact, rhs: Contact) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
     public var blocked: Bool?
     public var cellphoneNumber: String?
     public var email: String?

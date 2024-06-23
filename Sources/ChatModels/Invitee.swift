@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct Invitee: Codable {
+public struct Invitee: Codable, Hashable {
     public var id: String?
     public var idType: Int?
 

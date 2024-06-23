@@ -7,14 +7,6 @@
 import Foundation
 
 public struct Call: Codable, Equatable, Identifiable, Hashable {
-    public static func == (lhs: Call, rhs: Call) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
     public let id: Int
     public let creatorId: Int
     public let type: CallType

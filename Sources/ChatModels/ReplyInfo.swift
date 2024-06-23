@@ -6,11 +6,7 @@
 
 import Foundation
 
-public struct ReplyInfo: Codable, Identifiable {
-    public static func == (lhs: ReplyInfo, rhs: ReplyInfo) -> Bool {
-        lhs.repliedToMessageId == rhs.repliedToMessageId && lhs.message == rhs.message
-    }
-
+public struct ReplyInfo: Codable, Identifiable, Hashable {
     public var id: Int? { repliedToMessageId }
     public var deleted: Bool?
     public var repliedToMessageId: Int?

@@ -7,14 +7,6 @@
 import Foundation
 
 public struct Reaction: Codable, Hashable, Identifiable {
-    public static func == (lhs: Reaction, rhs: Reaction) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(reaction)
-    }
-
     public var id: Int?
     public var time: UInt?
     public var reaction: Sticker?

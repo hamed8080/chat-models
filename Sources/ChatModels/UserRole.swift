@@ -7,14 +7,6 @@
 import Foundation
 
 public struct UserRole: Codable, Hashable, Identifiable {
-    public static func == (lhs: UserRole, rhs: UserRole) -> Bool {
-        lhs.threadId == rhs.threadId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(roles)
-    }
-
     public var threadId: Int?
     public var roles: [Roles]?
     public var id: Int?

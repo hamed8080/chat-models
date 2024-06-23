@@ -7,24 +7,6 @@
 import Foundation
 
 public struct Conversation: Codable, Hashable, Identifiable {
-    public static func == (lhs: Conversation, rhs: Conversation) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(lastMessageVO)
-        hasher.combine(pinMessage)
-        hasher.combine(mute)
-        hasher.combine(admin)
-        hasher.combine(isArchive)
-        hasher.combine(group)
-        hasher.combine(closedThread)
-        hasher.combine(image)
-        hasher.combine(canSpam)
-        hasher.combine(canEditInfo)
-        hasher.combine(participants)
-    }
-
     public var admin: Bool?
     public var canEditInfo: Bool?
     public var canSpam: Bool = false

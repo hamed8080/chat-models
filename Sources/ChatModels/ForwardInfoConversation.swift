@@ -7,14 +7,6 @@
 import Foundation
 
 public struct ForwardInfoConversation: Codable, Hashable {
-    public static func == (lhs: ForwardInfoConversation, rhs: ForwardInfoConversation) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
     public var description: String?
     public var group: Bool?
     public var id: Int?

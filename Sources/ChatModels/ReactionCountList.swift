@@ -7,14 +7,6 @@
 import Foundation
 
 public struct ReactionCountList: Codable, Hashable, Identifiable {
-    public static func == (lhs: ReactionCountList, rhs: ReactionCountList) -> Bool {
-        lhs.messageId == rhs.messageId
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(messageId)
-    }
-
     public var id: Int? { messageId }
     public var messageId: Int?
     public var reactionCounts: [ReactionCount]?

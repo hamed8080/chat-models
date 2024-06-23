@@ -7,14 +7,6 @@
 import Foundation
 
 public struct TagParticipant: Codable, Hashable, Identifiable {
-    public static func == (lhs: TagParticipant, rhs: TagParticipant) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
     public var id: Int?
     public var active: Bool?
     public var tagId: Int?

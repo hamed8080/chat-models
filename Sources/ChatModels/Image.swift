@@ -7,14 +7,6 @@
 import Foundation
 
 public struct Image: Codable, Hashable, Identifiable {
-    public static func == (lhs: Image, rhs: Image) -> Bool {
-        lhs.id == rhs.id
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
     public var id = UUID()
     public var actualHeight: Int?
     public var actualWidth: Int?
