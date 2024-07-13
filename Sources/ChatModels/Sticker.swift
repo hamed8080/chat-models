@@ -12,6 +12,32 @@ public enum Sticker: Int, CaseIterable, Identifiable, Codable {
     case like = 2
     case happy = 3
     case cry = 4
+    case thumbsdown = 5
+    case redHeart = 6
+    case angryFace = 7
+    case verification = 8
+    case heartEyes = 9
+    case clappingHands = 10
+    case faceScreaming = 11
+    case flushingFace = 12
+    case grimacingFace = 13
+    case noExpressionFace = 14
+    case rofl = 15
+    case facepalmingGirl = 16
+    case facepalmingBoy = 17
+    case swearingFace = 18
+    case blowingAKissFace = 19
+    case seeNnoEvilMonkey = 20
+    case tulip = 21
+    case greenHeart = 22
+    case purpleHeart = 23
+    case bdCake = 24
+    case hundredPoints = 25
+    case alarm = 26
+    case partyPopper = 27
+    case personWalking = 28
+    case smilingPoo = 29
+    case cryingLoudlyFace = 30
 
 
     /// Only when can't decode a type.
