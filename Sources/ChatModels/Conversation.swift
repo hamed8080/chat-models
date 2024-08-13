@@ -10,7 +10,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
     public var admin: Bool?
     public var canEditInfo: Bool?
     public var canSpam: Bool = false
-    public var closedThread: Bool = false
+    public var closed: Bool = false
     public var description: String?
     public var group: Bool?
     public var id: Int?
@@ -50,7 +50,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         admin: Bool? = nil,
         canEditInfo: Bool? = nil,
         canSpam: Bool? = nil,
-        closedThread: Bool? = nil,
+        closed: Bool? = nil,
         description: String? = nil,
         group: Bool? = nil,
         id: Int? = nil,
@@ -89,7 +89,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         self.admin = admin
         self.canEditInfo = canEditInfo
         self.canSpam = canSpam ?? false
-        self.closedThread = closedThread ?? false
+        self.closed = closed ?? false
         self.description = description
         self.group = group
         self.id = id
@@ -131,7 +131,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         admin = try container.decodeIfPresent(Bool.self, forKey: .admin)
         canEditInfo = try container.decodeIfPresent(Bool.self, forKey: .canEditInfo)
         canSpam = try container.decodeIfPresent(Bool.self, forKey: .canSpam) ?? false
-        closedThread = try container.decodeIfPresent(Bool.self, forKey: .closedThread) ?? false
+        closed = try container.decodeIfPresent(Bool.self, forKey: .closed) ?? false
         description = try container.decodeIfPresent(String.self, forKey: .description)
         group = try container.decodeIfPresent(Bool.self, forKey: .group)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
@@ -172,7 +172,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         case admin
         case canEditInfo
         case canSpam
-        case closedThread
+        case closed
         case description
         case group
         case id
@@ -216,7 +216,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         try container.encodeIfPresent(admin, forKey: .admin)
         try container.encodeIfPresent(canEditInfo, forKey: .canEditInfo)
         try container.encodeIfPresent(canSpam, forKey: .canSpam)
-        try container.encodeIfPresent(closedThread, forKey: .closedThread)
+        try container.encodeIfPresent(closed, forKey: .closed)
         try container.encodeIfPresent(description, forKey: .description)
         try container.encodeIfPresent(group, forKey: .group)
         try container.encodeIfPresent(id, forKey: .id)
@@ -264,7 +264,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         hasher.combine(admin)
         hasher.combine(isArchive)
         hasher.combine(group)
-        hasher.combine(closedThread)
+        hasher.combine(closed)
         hasher.combine(image)
         hasher.combine(canSpam)
         hasher.combine(canEditInfo)
@@ -274,7 +274,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
     public var admin: Bool?
     public var canEditInfo: Bool?
     public var canSpam: Bool = false
-    public var closedThread: Bool = false
+    public var closed: Bool = false
     public var description: String?
     public var group: Bool?
     public var id: Int?
@@ -314,7 +314,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         admin: Bool? = nil,
         canEditInfo: Bool? = nil,
         canSpam: Bool? = nil,
-        closedThread: Bool? = nil,
+        closed: Bool? = nil,
         description: String? = nil,
         group: Bool? = nil,
         id: Int? = nil,
@@ -353,7 +353,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         self.admin = admin
         self.canEditInfo = canEditInfo
         self.canSpam = canSpam ?? false
-        self.closedThread = closedThread ?? false
+        self.closed = closed ?? false
         self.description = description
         self.group = group
         self.id = id
@@ -395,7 +395,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         admin = try container.decodeIfPresent(Bool.self, forKey: .admin)
         canEditInfo = try container.decodeIfPresent(Bool.self, forKey: .canEditInfo)
         canSpam = try container.decodeIfPresent(Bool.self, forKey: .canSpam) ?? false
-        closedThread = try container.decodeIfPresent(Bool.self, forKey: .closedThread) ?? false
+        closed = try container.decodeIfPresent(Bool.self, forKey: .closed) ?? false
         description = try container.decodeIfPresent(String.self, forKey: .description)
         group = try container.decodeIfPresent(Bool.self, forKey: .group)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
@@ -436,7 +436,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         case admin
         case canEditInfo
         case canSpam
-        case closedThread
+        case closed
         case description
         case group
         case id
@@ -480,7 +480,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         try container.encodeIfPresent(admin, forKey: .admin)
         try container.encodeIfPresent(canEditInfo, forKey: .canEditInfo)
         try container.encodeIfPresent(canSpam, forKey: .canSpam)
-        try container.encodeIfPresent(closedThread, forKey: .closedThread)
+        try container.encodeIfPresent(closed, forKey: .closed)
         try container.encodeIfPresent(description, forKey: .description)
         try container.encodeIfPresent(group, forKey: .group)
         try container.encodeIfPresent(id, forKey: .id)
