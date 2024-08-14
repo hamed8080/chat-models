@@ -45,6 +45,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
     public var participants: [Participant]?
     public var isArchive: Bool?
     public var pinMessage: PinMessage?
+    public var reactionStatus: ReactionStatus?
 
     public init(
         admin: Bool? = nil,
@@ -84,6 +85,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         lastMessageVO: LastMessageVO? = nil,
         participants: [Participant]? = nil,
         pinMessage: PinMessage? = nil,
+        reactionStatus: ReactionStatus? = nil,
         isArchive: Bool? = nil
     ) {
         self.admin = admin
@@ -123,6 +125,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         self.lastMessageVO = lastMessageVO
         self.participants = participants
         self.pinMessage = pinMessage
+        self.reactionStatus = reactionStatus
         self.isArchive = isArchive
     }
 
@@ -165,6 +168,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         participants = try container.decodeIfPresent([Participant].self, forKey: .participants)
         lastMessageVO = try container.decodeIfPresent(LastMessageVO.self, forKey: .lastMessageVO)
         pinMessage = try container.decodeIfPresent(PinMessage.self, forKey: .pinMessageVO)
+        reactionStatus = try container.decodeIfPresent(ReactionStatus.self, forKey: .reactionStatus)
         isArchive = try container.decodeIfPresent(Bool.self, forKey: .archiveThread)
     }
 
@@ -208,6 +212,7 @@ public struct Conversation: Codable, Hashable, Identifiable {
         case lastMessageVO
         case pinMessageVO
         case pinMessage // only in encode
+        case reactionStatus
         case archiveThread
     }
 
@@ -309,6 +314,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
     public var participants: [Participant]?
     public var isArchive: Bool?
     public var pinMessage: PinMessage?
+    public var reactionStatus: ReactionStatus?
 
     public init(
         admin: Bool? = nil,
@@ -348,6 +354,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         lastMessageVO: Message? = nil,
         participants: [Participant]? = nil,
         pinMessage: PinMessage? = nil,
+        reactionStatus: ReactionStatus? = nil,
         isArchive: Bool? = nil
     ) {
         self.admin = admin
@@ -387,6 +394,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         self.lastMessageVO = lastMessageVO
         self.participants = participants
         self.pinMessage = pinMessage
+        self.reactionStatus = reactionStatus
         self.isArchive = isArchive
     }
 
@@ -429,6 +437,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         participants = try container.decodeIfPresent([Participant].self, forKey: .participants)
         lastMessageVO = try container.decodeIfPresent(Message.self, forKey: .lastMessageVO)
         pinMessage = try container.decodeIfPresent(PinMessage.self, forKey: .pinMessageVO)
+        reactionStatus = try container.decodeIfPresent(ReactionStatus.self, forKey: .reactionStatus)
         isArchive = try container.decodeIfPresent(Bool.self, forKey: .archiveThread)
     }
 
@@ -472,6 +481,7 @@ public class ConversationClass: Codable, Hashable, Identifiable {
         case lastMessageVO
         case pinMessageVO
         case pinMessage // only in encode
+        case reactionStatus
         case archiveThread
     }
 
