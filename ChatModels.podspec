@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ChatModels"
-  s.version      = "2.1.0"
+  s.version      = "2.2.0"
   s.summary      = "ChatModels"
   s.description  = "A package, full of models that are building blocks of Chat SDK."
   s.homepage     = "https://pubgi.sandpod.ir/chat/ios/chat-models"
